@@ -32,6 +32,7 @@ namespace JuniorCodeTest.Components.Pages
 
 		async Task PopulateUserList()
 		{
+			RandomUsers.Clear();
 			var users = await RandomUserApiService.GetRandomUserDataFromApi();
 			RandomUsers.AddRange(users);
 		}

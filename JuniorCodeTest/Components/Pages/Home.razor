@@ -6,7 +6,7 @@
 <h1>Random Users List</h1>
 
 <p>Please find below a list of random users</p>
-<button onclick="PopulateUserList()">Generate</button>
+<button @onclick="async () => await PopulateUserList()">Refresh</button>
 
 @if (RandomUsers.Count == 0)
 {
