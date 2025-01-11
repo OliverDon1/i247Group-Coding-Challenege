@@ -1,11 +1,9 @@
 ﻿@page "/"
 @using JuniorCodeTest.Models
-
 <PageTitle>Random Users List</PageTitle>
-
 <h1>Random Users List</h1>
-
 <p>Please find below a list of random users</p>
+<!--Refreshes the generated data from the API-->
 <button @onclick="async () => await PopulateUserList()">Refresh</button>
 
 @if (RandomUsers.Count == 0)
