@@ -1,7 +1,9 @@
-﻿using JuniorCodeTest.Interfaces;
+﻿using System.Reflection.Metadata.Ecma335;
+using JuniorCodeTest.Interfaces;
 using JuniorCodeTest.Models;
 
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
 
 
 namespace JuniorCodeTest.Components.Pages

@@ -7,7 +7,7 @@ namespace JuniorCodeTest.Services
 {
 	public class RandomUserApiService(HttpClient httpClient) : IRandomUserApiService
 	{
-		private const string randomUserEndPoint = "https://randomuser.me/api";
+		private const string randomUserEndPoint = "https://randomuser.me/api/?results=5";
 
 		public async Task<List<RequestedUsersModel>> GetRandomUserDataFromApi()
 		{
@@ -29,10 +29,13 @@ namespace JuniorCodeTest.Services
 							Age = randomUser.dob.age,
 							First = randomUser.name.first,
 							Last = randomUser.name.last,
-							Title = randomUser.name.title
+							Title = randomUser.name.title,
+							Country = randomUser.location.country,
+							Longitude = randomUser.location.coordinates.longitude,
+							Latitude = randomUser.location.coordinates.latitude
 						};
 
-						if (requiredDataList.Count >= 5)
+						if (requiredDataList.Count == 5)
 						{
 							break;
 						}
